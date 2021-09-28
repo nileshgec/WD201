@@ -1,8 +1,7 @@
 require "date"
 
 class Todo
-  # ..
-  # ..
+
   def initialize(text, due_date, completed)
     @text = text
     @due_date = due_date
@@ -13,8 +12,7 @@ class Todo
     @due_date
   end
 
-  # ..
-  # ..
+
 
   def to_displayable_string
     display_status = @completed ? "[x]" : "[ ]"
@@ -46,8 +44,6 @@ class TodosList
     TodosList.new(@todos.select { |todo| todo.due_date > Date.today })
   end
 
-  # ..
-  # ..
 
   def to_displayable_list
     @todos.map { |todo| todo.to_displayable_string }
